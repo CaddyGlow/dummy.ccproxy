@@ -44,11 +44,11 @@ class DummyRuntime(SystemPluginRuntime):
 
 
 class DummyFactory(SystemPluginFactory):
-    """Factory for the auth_lb system plugin."""
+    """Factory for the dummp system plugin."""
 
     def __init__(self) -> None:
         manifest = PluginManifest(
-            name="auth_lb",
+            name="dummy",
             version="0.1.0",
             description="Custom CCProxy plugin.",
             is_provider=False,
