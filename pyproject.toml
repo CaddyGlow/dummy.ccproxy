@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dummy"
+version = "0.1.0"
+description = "Adds awesome dummy to CCProxy"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "You", email = "you@example.com" }]
+dependencies = [
+  "httpx>=0.27",
+  "structlog>=24.1",
+]
+
+[project.optional-dependencies]
+ccproxy-runtime = [
+  "aiosqlite>=0.20",
+]
+
+[project.entry-points."ccproxy.plugins"]
+my_plugin = "dummy.plugin:factory"
+
